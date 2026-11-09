@@ -1838,3 +1838,31 @@ ul {
   background: var(--accent);
   color: var(--bg);
 }
+
+/* Top gallery: Move LEFT */
+.gallery-track--left .gallery-group {
+  animation: galleryLeft 35s linear infinite;
+}
+
+/* Bottom gallery: Move RIGHT */
+.gallery-track--right .gallery-group {
+  animation: galleryRight 35s linear infinite;
+}
+
+@keyframes galleryLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes galleryRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
