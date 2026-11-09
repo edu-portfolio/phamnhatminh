@@ -1839,14 +1839,60 @@ ul {
   color: var(--bg);
 }
 
-/* Top gallery: Move LEFT */
-.gallery-track--left .gallery-group {
+
+/* ==============================
+   HONORS IMAGE GALLERY
+================================ */
+
+.honors-gallery {
+  width: 100%;
+  margin: 45px 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gallery-window {
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery-track {
+  display: flex;
+  width: max-content;
+  gap: 0;
+}
+
+.gallery-group {
+  display: flex;
+  flex-shrink: 0;
+  gap: 16px;
+  padding-right: 16px;
+}
+
+.gallery-group img {
+  display: block;
+  width: 280px;
+  height: 185px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+/* TOP: MOVE LEFT */
+.gallery-track--left {
   animation: galleryLeft 35s linear infinite;
 }
 
-/* Bottom gallery: Move RIGHT */
-.gallery-track--right .gallery-group {
+/* BOTTOM: MOVE RIGHT */
+.gallery-track--right {
   animation: galleryRight 35s linear infinite;
+}
+
+/* Pause on hover */
+.gallery-window:hover .gallery-track {
+  animation-play-state: paused;
 }
 
 @keyframes galleryLeft {
@@ -1854,15 +1900,24 @@ ul {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
 @keyframes galleryRight {
   from {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
   to {
     transform: translateX(0);
   }
 }
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .gallery-group img {
+    width: 210px;
+    height: 145px;
+  }
+}
+
