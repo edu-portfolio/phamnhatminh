@@ -1861,11 +1861,12 @@ ul {
   display: flex;
   width: max-content;
   gap: 0;
+  will-change: transform;
 }
 
 .gallery-group {
   display: flex;
-  flex-shrink: 0;
+  flex: 0 0 auto;
   gap: 16px;
   padding-right: 16px;
 }
