@@ -1920,18 +1920,19 @@ ul {
     width: 210px;
     height: 145px;
   }
+}
 
 .about__bio a {
-  color: inherit;
-  text-decoration: underline;
-  text-decoration-color: #5ed6c0;
-  text-underline-offset: 4px;
-  transition: color 0.3s ease;
+    color: #70D6C5;
+    text-decoration: underline;
+    text-decoration-color: #70D6C5;
+    text-underline-offset: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 .about__bio a:hover {
-  color: #5ed6c0;
-}
-
+    color: #FFFFFF;
+    text-decoration-color: #FFFFFF;
 }
 
