@@ -1922,7 +1922,9 @@ ul {
   }
 }
 
+
 .about__bio a {
+    display: inline-block;
     color: #70D6C5;
     text-decoration: underline;
     text-decoration-color: #70D6C5;
@@ -1934,5 +1936,8 @@ ul {
 .about__bio a:hover {
     color: #FFFFFF;
     text-decoration-color: #FFFFFF;
+    transform: translateY(-3px);
+    text-shadow: 0 0 12px rgba(112, 214, 197, 0.5);
 }
+
 
